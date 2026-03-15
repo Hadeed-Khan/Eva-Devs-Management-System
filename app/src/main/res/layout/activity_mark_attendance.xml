@@ -9,8 +9,8 @@
     tools:context=".Activities.ActivityMarkAttendance">
 
     <ImageView
-        android:layout_width="28dp"
-        android:layout_height="28dp"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
         app:layout_constraintTop_toTopOf="@+id/header_Title"
         app:layout_constraintBottom_toBottomOf="@+id/header_Title"
         app:layout_constraintStart_toStartOf="parent"
