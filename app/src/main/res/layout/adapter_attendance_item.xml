@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardUseCompatPadding="true"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="7dp"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:padding="15dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Student ID :"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/stuentIdLebel"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textSize="18sp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="10"
+                android:textColor="#000"
+                app:layout_constraintTop_toTopOf="parent"
+                android:id="@+id/stuentIdTV2"
+                app:layout_constraintStart_toEndOf="@id/stuentIdLebel"
+                android:paddingStart="2dp"
+                android:textSize="17dp"
+                android:textStyle="bold"
+                android:paddingBottom="4dp"
+                android:layout_marginStart="3dp"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/bg_container"
+                app:layout_constraintTop_toBottomOf="@id/stuentIdTV2"
+                android:layout_marginTop="4dp"
+                android:id="@+id/line1"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/line1"
+                android:text="Ali Khan"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="4dp"
+                android:textColor="#000"
+                android:textSize="20sp"
+                android:id="@+id/studentNameTV"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/studentNameTV"
+                android:text="Waqas Khan"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginTop="4dp"
+                android:textColor="#C6000000"
+                android:textSize="17sp"
+                android:id="@+id/studentFNameTV"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/bg_container"
+                app:layout_constraintTop_toBottomOf="@id/studentFNameTV"
+                android:layout_marginTop="4dp"
+                android:id="@+id/line2"
+                app:layout_goneMarginTop="5dp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date :"
+                android:id="@+id/datelebel"
+                app:layout_constraintTop_toBottomOf="@id/line2"
+                android:layout_marginTop="8dp"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12/Jan/2025"
+                android:id="@+id/dateTV"
+                android:textColor="#000"
+
+                app:layout_constraintTop_toBottomOf="@id/line2"
+                android:layout_marginTop="8dp"
+                android:textSize="18sp"
+                app:layout_constraintStart_toEndOf="@+id/datelebel"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line2"
+                android:text="Present"
+                android:layout_marginTop="9dp"
+                android:background="@drawable/bg_leave"
+                android:paddingHorizontal="20dp"
+                android:textSize="17sp"
+                android:textColor="#fff"
+                android:id="@+id/statusTV"
+/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

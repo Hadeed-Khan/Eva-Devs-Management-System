@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:background="@color/bodyColor"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ActivityViewFeeRecord">
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintTop_toTopOf="@+id/header_Title"
+        app:layout_constraintBottom_toBottomOf="@+id/header_Title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="#fff"
+        android:src="@drawable/left_arrow"
+        android:elevation="1dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/backActivityIV"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/blue"
+        android:text="ALL FEE RECORDS"
+        android:gravity="center"
+        android:textSize="27sp"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto_medium"
+        android:paddingTop="35dp"
+        android:id="@+id/header_Title"
+        />
+
+<androidx.core.widget.NestedScrollView
+    app:layout_constraintTop_toBottomOf="@+id/header_Title"
+    android:layout_width="match_parent"
+    android:layout_height="630dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/filterCard"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:background="@drawable/bg_input"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="5dp"
+                app:layout_constraintTop_toTopOf="parent"
+                android:hint="Search Student Name,Course Name"
+                android:paddingHorizontal="10dp"
+                android:textSize="14sp"
+                android:textColor="#000"
+                android:inputType="text"
+                android:imeOptions="actionDone"
+                android:id="@+id/searchFeeET"
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/filter"
+                app:layout_constraintTop_toBottomOf="@+id/searchFeeET"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="30dp"
+                android:id="@+id/showFilterBoxIV"
+                />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:visibility="gone"
+                android:id="@+id/filterBox"
+                app:layout_constraintTop_toBottomOf="@id/showFilterBoxIV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Filter By Fee Type"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:id="@+id/filterText"
+                    />
+
+                <Spinner
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bg_input"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/feeTypeSP"
+                    app:layout_constraintTop_toBottomOf="@+id/filterText"
+
+                    />
+
+
+                <TextView
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Filter By Fee Status"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintTop_toBottomOf="@+id/feeTypeSP"
+                    android:id="@+id/filterStatusText"
+                    />
+
+                <Spinner
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/bg_input"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:id="@+id/statusSP"
+                    android:layout_marginTop="7dp"
+                    app:layout_constraintTop_toBottomOf="@+id/filterStatusText"
+                    android:entries="@array/FeeStatus"
+                    />
+
+                <TextView
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Filter By Fee Month"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintTop_toBottomOf="@+id/statusSP"
+                    android:id="@+id/feeMonthText"
+                    />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/calendar"
+                    app:layout_constraintTop_toBottomOf="@+id/statusSP"
+                    app:layout_constraintStart_toEndOf="@+id/feeMonthText"
+                   android:layout_marginStart="10dp"
+                    android:layout_marginTop="6dp"
+                    android:id="@+id/showDateDialogIV"
+                    app:tint="@color/blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/statusSP"
+                    app:layout_constraintStart_toEndOf="@id/showDateDialogIV"
+                    android:textColor="#000"
+                    android:gravity="center"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/montlyFeeTV"
+                    />
+
+                <TextView
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Filter By Payment Date"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginStart="10dp"
+                    app:layout_constraintTop_toBottomOf="@+id/feeMonthText"
+                    android:id="@+id/feeDateTV"
+                    />
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/calendar"
+                    android:layout_marginTop="8dp"
+                    app:layout_constraintTop_toBottomOf="@+id/feeMonthText"
+                    app:layout_constraintStart_toEndOf="@+id/feeDateTV"
+                   android:layout_marginStart="10dp"
+                    android:id="@+id/showPaymentDateDialog"
+                    />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@+id/showDateDialogIV"
+                    app:layout_constraintStart_toEndOf="@id/showPaymentDateDialog"
+                    android:textColor="#000"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/paymentDateTV"
+                    />
+
+                <Button
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    app:layout_constraintTop_toBottomOf="@id/showPaymentDateDialog"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:text="Apply"
+                    android:gravity="center"
+                    android:background="@drawable/bg_addstudent_bt"
+                    android:layout_marginEnd="40dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#fff"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:id="@+id/applyFilterBT"
+                    />
+
+                <Button
+                    android:layout_width="120dp"
+                    android:layout_height="40dp"
+                    app:layout_constraintTop_toBottomOf="@id/showPaymentDateDialog"
+                    app:layout_constraintEnd_toStartOf="@+id/applyFilterBT"
+                    android:text="Clear Filter"
+                    android:gravity="center"
+                    android:background="@drawable/bg_cancel_bt"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginTop="10dp"
+                    android:textColor="#000"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:id="@+id/clearFilterBT"
+                    />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="630dp"
+        app:layout_constraintTop_toBottomOf="@id/filterCard"
+        android:padding="5dp"
+        android:id="@+id/feeRecycler"
+        />
+
+    <TextView
+        android:id="@+id/noDataFound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="casual"
+        android:gravity="center"
+        android:text="No Data Found"
+        android:textColor="#000"
+        android:textSize="20dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
+
+
+    <ImageView
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/newFeeBT"
+        android:layout_width="60dp"
+        android:padding="10dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/ic_add"
+        android:background="@drawable/bg_addbt"
+        android:layout_height="60dp"
+        app:tint="@color/white" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

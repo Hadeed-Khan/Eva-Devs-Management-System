@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">Eva Devs Management System</string>
+
+    <string-array name="course_duration">
+        <item>3 Months</item>
+        <item>6 Months</item>
+        <item>1 Year</item>
+    </string-array>
+
+    <string-array name="fee_type">
+        <item>Admission Fee</item>
+        <item>Monthly Fee</item>
+    </string-array>
+
+    <string-array name="CourseFee_Sorting">
+
+        <item>Default</item>
+        <item>High To Low</item>
+        <item>Low to High</item>
+
+    </string-array>
+
+    <string-array name="attendanceStatus">
+        <item>ALL</item>
+        <item>Present</item>
+        <item>Absent</item>
+        <item>Leave</item>
+    </string-array>
+
+    <string-array name="FeeStatus">
+        <item>ALL</item>
+        <item>Full Paid</item>
+        <item>UnPaid</item>
+    </string-array>
+</resources>

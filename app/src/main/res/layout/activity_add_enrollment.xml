@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bodyColor"
+    tools:context=".Activities.ActivityAddEnrollment">
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintTop_toTopOf="@+id/header_Title"
+        app:layout_constraintBottom_toBottomOf="@+id/header_Title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="#fff"
+        android:src="@drawable/left_arrow"
+        android:elevation="1dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/backActivityIV"
+        />
+
+    <TextView
+        android:id="@+id/header_Title"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:background="@drawable/bg_card1"
+        android:fontFamily="@font/roboto_medium"
+        android:gravity="center"
+        android:paddingTop="35dp"
+        android:text="ADD ENROLLMENTS"
+        android:textColor="#fff"
+        android:textSize="27sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <androidx.core.widget.NestedScrollView
+        app:layout_constraintTop_toBottomOf="@+id/header_Title"
+        android:layout_width="match_parent"
+        android:layout_height="645dp">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+
+
+
+    <Button
+        android:id="@+id/chooseStdBT"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/white"
+        android:background="@drawable/bg_addstudent_bt"
+        android:text="Choose Student"
+        android:fontFamily="@font/roboto_light"
+        android:layout_width="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:layout_marginTop="30dp"
+        android:layout_height="50dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:visibility="gone"
+        android:id="@+id/containerStd"
+        android:background="@drawable/bg_box"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/chooseStdBT"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+        <EditText
+            android:paddingStart="8dp"
+            android:background="@drawable/bg_input"
+            android:hint="Search Student Name,F Name"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/searchStdET"
+            android:inputType="text"
+            android:textSize="15dp"
+            android:imeOptions="actionDone"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Data Found"
+            android:elevation="1dp"
+            android:id="@+id/noDataFound"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:gravity="center"
+            android:fontFamily="casual"
+            android:textSize="16dp"
+            android:textColor="#000"
+            />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerStd"
+            android:background="#fff"
+            android:elevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchStdET"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/chooseCourseBT"
+        app:layout_constraintTop_toBottomOf="@id/containerStd"
+        android:textColor="@color/white"
+        android:text="Choose Course"
+        android:background="@drawable/bg_addstudent_bt"
+        android:layout_width="150dp"
+        android:fontFamily="@font/roboto_light"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+        android:textSize="18sp"
+        android:layout_height="50dp"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+android:visibility="gone"
+        android:id="@+id/containerCourse"
+        android:background="@drawable/bg_box"
+        android:padding="10dp"
+        app:layout_constraintTop_toBottomOf="@id/chooseCourseBT"
+        android:layout_width="match_parent"
+        android:layout_height="200dp">
+
+
+        <EditText
+            android:paddingHorizontal="10dp"
+            android:background="@drawable/bg_input"
+            android:hint="Search Course Name"
+            android:inputType="text"
+            android:imeOptions="actionDone"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/searchCourseET"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+
+        <TextView
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No Data Found"
+            android:elevation="1dp"
+            android:id="@+id/noDataFound2"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:gravity="center"
+            android:fontFamily="casual"
+            android:textSize="16dp"
+            android:textColor="#000"
+            />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerCourse"
+            android:background="#fff"
+            android:elevation="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/searchCourseET"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/showDateBT"
+        app:layout_constraintTop_toBottomOf="@id/containerCourse"
+        android:textColor="@color/white"
+        android:text="Select Date"
+        android:background="@drawable/bg_addstudent_bt"
+        android:layout_width="150dp"
+        android:gravity="center"
+        android:fontFamily="@font/roboto_light"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="12dp"
+        android:textSize="18sp"
+        android:layout_height="50dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="75dp"
+        app:layout_constraintTop_toBottomOf="@id/dateDP"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="1dp"
+        android:layout_margin="10dp"
+        android:id="@+id/selectedCard"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Selected Student"
+                app:layout_constraintTop_toTopOf="parent"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:id="@+id/selectedStudentlebel"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/selectedStudentlebel"
+                app:layout_constraintStart_toStartOf="parent"
+                android:textColor="#000"
+                android:paddingStart="6dp"
+                android:id="@+id/stdIdTV"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/selectedStudentlebel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="#000"
+                android:id="@+id/stdNameTV"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/selectedStudentlebel"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="#000"
+                android:paddingEnd="6dp"
+                android:id="@+id/stdFNameTV"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Selected Course"
+                app:layout_constraintTop_toBottomOf="@+id/stdFNameTV"
+                android:gravity="center"
+                android:textColor="#000"
+                android:textSize="12dp"
+                android:textStyle="bold"
+                android:id="@+id/selectedCourselebel"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/selectedCourselebel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:textColor="#000"
+                android:id="@+id/courseNameTV"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <DatePicker
+        android:visibility="gone"
+        android:id="@+id/dateDP"
+        android:datePickerMode="spinner"
+        android:calendarViewShown="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/showDateBT"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:textColor="@color/white"
+        android:id="@+id/enrollBT"
+        android:text="Enroll"
+        android:background="@drawable/bg_addstudent_bt"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/selectedCard"
+        android:layout_width="160dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="50dp"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        app:cardCornerRadius="10dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:background="#fff"
+            android:padding="1dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/idT"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:text="Course ID :"
+                android:textColor="#97000000"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/courseNameTV"
+                android:id="@+id/durationIV"
+                android:padding="3dp"
+                android:src="@drawable/calendar"
+                app:tint="@color/blue" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Duration :"
+                android:textColor="#C4000000"
+                android:textSize="13sp"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/roboto_regular"
+                android:id="@+id/courseDurationT"
+                app:layout_constraintTop_toBottomOf="@id/courseNameTV"
+                app:layout_constraintStart_toEndOf="@id/durationIV"
+                />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/durationIV"
+                android:id="@+id/feeIV"
+                android:padding="3dp"
+                android:src="@drawable/taxes"
+                app:tint="@color/blue" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fee :"
+                android:textColor="#C4000000"
+                android:textSize="13sp"
+                android:layout_marginStart="3dp"
+                android:fontFamily="@font/roboto_regular"
+                android:layout_marginTop="8dp"
+                android:id="@+id/courseFeeT"
+                app:layout_constraintTop_toBottomOf="@id/courseDurationT"
+                app:layout_constraintStart_toEndOf="@id/feeIV"
+                />
+
+
+            <TextView
+                android:id="@+id/courseIdTV"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginTop="1dp"
+                android:text=" 1"
+                android:fontFamily="@font/roboto_condensed_blackitalic"
+                android:layout_marginEnd="4dp"
+                android:textColor="#C3000000"
+                android:textSize="17sp"
+                app:layout_constraintStart_toEndOf="@+id/idT"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                app:layout_constraintTop_toBottomOf="@+id/idT"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:id="@+id/line"
+                android:layout_marginVertical="2dp"
+                android:background="#DDDDDD"/>
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/line"
+                android:id="@+id/courseIV"
+                android:padding="3dp"
+                android:src="@drawable/book"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="App Development"
+                android:textColor="#000"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="1dp"
+                android:textSize="17sp"
+                android:fontFamily="@font/roboto_medium"
+                android:id="@+id/courseNameTV"
+                app:layout_constraintTop_toBottomOf="@id/line"
+                app:layout_constraintStart_toEndOf="@+id/courseIV"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="6 Months"
+                android:textColor="#000"
+                android:textSize="15sp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="4dp"
+                android:fontFamily="@font/roboto_regular"
+                android:id="@+id/courseDurationTV"
+                app:layout_constraintTop_toBottomOf="@id/courseNameTV"
+                app:layout_constraintStart_toEndOf="@+id/courseDurationT"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4000"
+                android:textColor="#231F1F"
+                android:layout_marginTop="5dp"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:layout_marginStart="4dp"
+                android:fontFamily="@font/roboto_condensed_blackitalic"
+                android:id="@+id/courseFeeTV"
+                app:layout_constraintTop_toBottomOf="@id/courseDurationTV"
+                app:layout_constraintStart_toEndOf="@+id/courseFeeT"
+                />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

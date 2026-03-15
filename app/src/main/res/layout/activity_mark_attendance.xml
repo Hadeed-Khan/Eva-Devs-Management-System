@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bodyColor"
+    tools:context=".Activities.ActivityMarkAttendance">
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintTop_toTopOf="@+id/header_Title"
+        app:layout_constraintBottom_toBottomOf="@+id/header_Title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="#fff"
+        android:src="@drawable/left_arrow"
+        android:elevation="1dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/backActivityIV"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/blue"
+        android:text="MARK ATTENDANCE"
+        android:gravity="center"
+        android:textSize="27sp"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto_medium"
+        android:paddingTop="35dp"
+        android:id="@+id/header_Title"
+        />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/header_Title"
+        android:layout_height="630dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/roboto_light"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/bg_addstudent_bt"
+        android:text="Select Date"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:id="@+id/selectDateBT"
+        />
+
+    <DatePicker
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/selectDateBT"
+        android:calendarViewShown="false"
+        android:datePickerMode="spinner"
+        android:id="@+id/dateDP"
+        />
+
+    <androidx.cardview.widget.CardView
+        android:layout_marginTop="10dp"
+        app:cardUseCompatPadding="true"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:id="@+id/studentCardView"
+        app:layout_constraintTop_toBottomOf="@+id/dateDP"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Students"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto_medium"
+                android:textColor="#000000"
+                android:id="@+id/chooseStudentLebel"
+                app:layout_constraintBottom_toTopOf="@+id/recyclerStudent"
+                android:layout_marginBottom="20dp"
+                android:textSize="18sp"
+                />
+
+            <androidx.recyclerview.widget.RecyclerView
+                app:layout_constraintTop_toBottomOf="@id/chooseStudentLebel"
+                android:id="@+id/recyclerStudent"
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:padding="4dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <Button
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@+id/studentCardView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bg_addstudent_bt"
+        android:id="@+id/markAttendanceBT"
+        android:text="Mark"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

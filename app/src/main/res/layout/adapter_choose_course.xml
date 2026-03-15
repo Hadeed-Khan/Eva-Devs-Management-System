@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:id="@+id/box"
+        android:background="@drawable/bg_student_adapter"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+    <TextView
+        android:id="@+id/courseIdTV"
+        android:textColor="#000"
+        app:layout_constraintWidth_percent="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="0dp"
+        android:fontFamily="@font/roboto_condensed_blackitalic"
+        android:textSize="17sp"
+        android:paddingStart="8dp"
+        android:text="1"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="App Development"
+        android:textColor="#000"
+        android:id="@+id/courseNameTV"
+        android:gravity="center"
+        android:fontFamily="@font/roboto_regular"
+        app:layout_constraintWidth_percent="0.53"
+        app:layout_constraintStart_toEndOf="@id/courseIdTV"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="0dp"
+        android:textSize="17sp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="3 months"
+        android:textColor="#000"
+        android:id="@+id/courseDurationTV"
+        app:layout_constraintWidth_percent="0.29"
+        app:layout_constraintStart_toEndOf="@id/courseNameTV"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="0dp"
+        android:fontFamily="@font/roboto_light"
+        android:gravity="center"
+        android:textSize="17sp"
+        android:layout_height="wrap_content"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

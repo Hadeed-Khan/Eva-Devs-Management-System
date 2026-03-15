@@ -1,0 +1,14 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.EvaDevsManagementSystem" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="materialButtonStyle">@style/myOwnStyle</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/blue</item>
+    </style>
+
+    <style name="myOwnStyle"></style>
+
+    <style name="Theme.EvaDevsManagementSystem" parent="Base.Theme.EvaDevsManagementSystem" />
+</resources>

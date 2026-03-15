@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp"
+    android:layout_marginTop="2dp"
+    android:layout_margin="4dp"
+    app:strokeWidth="2dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <!-- Student ID -->
+        <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/tvStudentId"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student ID :"
+            android:textSize="14sp"
+            android:textColor="#777"/>
+
+        <TextView
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvStudentId"
+            android:id="@+id/studentIdTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0000"
+            android:fontFamily="@font/roboto_condensed_blackitalic"
+            android:layout_marginStart="3dp"
+            android:textSize="14sp"
+            android:textColor="#575050"/>
+
+
+        <View
+            app:layout_constraintTop_toBottomOf="@+id/studentIdTV"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:id="@+id/line"
+            android:layout_marginVertical="8dp"
+            android:background="#DDDDDD"/>
+
+        <!-- Name -->
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintTop_toBottomOf="@id/line"
+            android:src="@drawable/user"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/studentNameIV"
+            app:tint="@color/blue" />
+
+        <TextView
+            app:layout_constraintTop_toBottomOf="@+id/line"
+            android:id="@+id/studentNameTV"
+            app:layout_constraintStart_toEndOf="@+id/studentNameIV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Student Name"
+            android:gravity="center"
+            android:layout_marginTop="3dp"
+            android:layout_marginStart="6dp"
+            android:textStyle="bold"
+            android:fontFamily="@font/roboto_regular"
+            android:textSize="20sp"
+            android:textColor="#F3353B40"/>
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@id/studentNameTV"
+            android:src="@drawable/father"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/studentFNameIV"
+            app:tint="#2196F3" />
+
+        <!-- Father Name -->
+        <TextView
+            app:layout_constraintStart_toEndOf="@id/studentFNameIV"
+            app:layout_constraintTop_toBottomOf="@+id/studentNameTV"
+            android:id="@+id/tvFatherName"
+            android:layout_width="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Father Name:"
+            android:textSize="15sp"
+            android:textColor="#555"/>
+
+        <TextView
+            app:layout_constraintStart_toEndOf="@+id/tvFatherName"
+            app:layout_constraintTop_toBottomOf="@+id/studentNameTV"
+            android:id="@+id/studentFatherNameTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginStart="6dp"
+            android:fontFamily="@font/roboto_light"
+            android:text="Ali Nawaz"
+            android:textSize="15sp"
+            android:textColor="#555"/>
+
+
+        <ImageView
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginTop="9dp"
+            app:layout_constraintTop_toBottomOf="@id/studentFatherNameTV"
+            android:src="@drawable/gender"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/genderIV"
+            app:tint="#008EFF" />
+
+        <!-- Gender  -->
+        <TextView
+            app:layout_constraintStart_toEndOf="@+id/genderIV"
+            app:layout_constraintTop_toBottomOf="@+id/studentFatherNameTV"
+            android:id="@+id/studentGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="10dp"
+            android:text="Gender:"
+            android:textSize="15sp"
+            android:textColor="#555"/>
+
+        <TextView
+            app:layout_constraintStart_toEndOf="@+id/studentGender"
+            app:layout_constraintTop_toBottomOf="@+id/studentFatherNameTV"
+            android:id="@+id/studentGenderTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="6dp"
+            android:text="Male"
+            android:textSize="15sp"
+            android:textColor="#555"/>
+
+
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@id/genderIV"
+            android:src="@drawable/phone_call"
+            app:layout_constraintStart_toStartOf="parent"
+            android:id="@+id/numberIV"
+            app:tint="#008EFF" />
+
+        <!-- Phone -->
+        <TextView
+            app:layout_constraintStart_toEndOf="@+id/numberIV"
+            app:layout_constraintTop_toBottomOf="@+id/studentGenderTV"
+            android:id="@+id/tvPhoneNumber"
+            android:layout_marginStart="4dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Phone:"
+            android:textSize="15sp"
+            android:textColor="#555"/>
+
+        <TextView
+            app:layout_constraintStart_toEndOf="@+id/tvPhoneNumber"
+            app:layout_constraintTop_toBottomOf="@+id/studentGenderTV"
+            android:id="@+id/studentPhoneNumberTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="03432424242"
+            android:fontFamily="@font/roboto_condensed_blackitalic"
+            android:layout_marginStart="1dp"
+            android:textSize="15sp"
+            android:textColor="#555"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bodyColor"
+    tools:context=".Activities.ActivityViewAttendance">
+
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        app:layout_constraintTop_toTopOf="@+id/header_Title"
+        app:layout_constraintBottom_toBottomOf="@+id/header_Title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:tint="#fff"
+        android:src="@drawable/left_arrow"
+        android:elevation="1dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginStart="10dp"
+        android:id="@+id/backActivityIV"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/blue"
+        android:text="ATTENDANCE RECORDS"
+        android:gravity="center"
+        android:textSize="27sp"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:fontFamily="@font/roboto_medium"
+        android:paddingTop="35dp"
+        android:id="@+id/header_Title"
+        />
+
+
+
+    <ImageView
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/newAttendanceBT"
+        android:layout_width="60dp"
+        android:padding="10dp"
+        android:elevation="2dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/ic_add"
+        android:background="@drawable/bg_addbt"
+        android:layout_height="60dp"
+        app:tint="@color/white" />
+
+    <androidx.cardview.widget.CardView
+        app:layout_constraintTop_toBottomOf="@id/header_Title"
+        android:layout_width="match_parent"
+        android:id="@+id/filterCard"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="6dp"
+        app:cardUseCompatPadding="true"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <EditText
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/bg_input"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:hint="Search by Name, Id"
+                android:textColor="#000"
+                android:paddingHorizontal="10dp"
+                android:id="@+id/searchAttendanceET"
+                />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/nofilter"
+                app:layout_constraintTop_toBottomOf="@id/searchAttendanceET"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="40dp"
+                android:id="@+id/clearFilter"
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/filter"
+                app:layout_constraintTop_toBottomOf="@id/searchAttendanceET"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="40dp"
+                android:id="@+id/showFilterBox"
+                 />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:visibility="gone"
+                android:id="@+id/filterBox"
+                app:layout_constraintTop_toBottomOf="@id/showFilterBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                >
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Filter By Status"
+                android:textStyle="bold"
+                app:layout_constraintTop_toTopOf="parent"
+                android:textColor="#000"
+                android:layout_marginStart="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/spLebel"
+                android:layout_marginTop="4dp"
+                />
+
+            <Spinner
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                app:layout_constraintTop_toBottomOf="@id/spLebel"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:background="@drawable/bg_input"
+                android:layout_marginTop="4dp"
+                android:id="@+id/statusFilterSP"
+                android:entries="@array/attendanceStatus"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Filter By Date"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/statusFilterSP"
+                android:textColor="#000"
+                android:layout_marginStart="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                android:id="@+id/dateLebel"
+                android:layout_marginTop="4dp"
+                />
+
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/calendar"
+                    app:layout_constraintTop_toBottomOf="@id/statusFilterSP"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:layout_marginEnd="40dp"
+                    android:id="@+id/showDateDialog"
+                    app:tint="@color/blue" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <TextView
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="No Data Found"
+        android:id="@+id/noDataFound"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:gravity="center"
+        android:fontFamily="casual"
+        android:textSize="16dp"
+        android:textColor="#000"
+        />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="450dp"
+        android:elevation="1dp"
+        app:layout_constraintTop_toBottomOf="@id/filterCard"
+        android:layout_marginTop="10dp"
+        android:padding="4dp"
+        android:id="@+id/attendanceRecycler"
+        />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

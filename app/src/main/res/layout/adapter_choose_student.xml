@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@drawable/bg_student_adapter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/box"
+        app:layout_constraintTop_toTopOf="parent"
+        >
+    <TextView
+        android:id="@+id/idTV"
+        android:fontFamily="@font/roboto_condensed_blackitalic"
+        app:layout_constraintWidth_percent="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="0dp"
+        android:text="1"
+        android:paddingStart="6dp"
+        android:textColor="#000"
+        android:textSize="20sp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="Ali Khan"
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:id="@+id/nameTV"
+        android:gravity="center"
+        android:fontFamily="@font/roboto_regular"
+        app:layout_constraintWidth_percent="0.42"
+        app:layout_constraintStart_toEndOf="@id/idTV"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="Khan"
+        android:gravity="center"
+        android:textSize="18sp"
+        android:textColor="#000"
+        android:id="@+id/fNameTV"
+        android:fontFamily="@font/roboto_light"
+        app:layout_constraintWidth_percent="0.42"
+        app:layout_constraintStart_toEndOf="@id/nameTV"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.EvaDevsManagementSystem"
+        tools:targetApi="31">
+        <activity
+            android:name=".Activities.ActivityLogin"
+            android:exported="false" />
+        <activity
+            android:name=".TemporaryActivity"
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name=".Activities.MainActivity" -->
+        <!-- android:exported="false" /> -->
+        <activity
+            android:name=".Activities.ActivityInActiveSection"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ActivityReport"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ActivityDeleteAttendance"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ActivityMarkAttendance"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ActivityViewAttendance"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ActivityViewEnrollments"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ActivityAttendance"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ActivityDeleteFee"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ActivityAddFee"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ActivityViewFeeRecord"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ActivityUpdateEnrollment"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ActivityAddEnrollment"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ActivityUpdateCourse"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ActivityAddCourse"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ActivityUpdateStudent"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ActivityAddStudent"
+            android:exported="false" />
+        <activity
+            android:name=".Activities.ActivitySplash"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
