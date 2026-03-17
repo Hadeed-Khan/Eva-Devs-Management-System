@@ -163,9 +163,9 @@ are automatically moved to the **Previous Section**.
   * "Remember Me" feature is available
 ---
 
-## 📩 Feedback
+## Feedback
 
 You can use this app and share your feedback.
 If you find any bug or issue, please let me know — I will fix it.
 
-**Thank You 👍**
+**Thank You**
