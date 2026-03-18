@@ -118,7 +118,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toTopOf="@+id/loginBT"
             app:layout_constraintStart_toStartOf="parent"
-            android:text="User Name Or Password Invalid"
+            android:text="Invalid Username Or Password"
             android:textColor="#DD0E0E"
             android:visibility="gone"
             android:layout_marginStart="10dp"

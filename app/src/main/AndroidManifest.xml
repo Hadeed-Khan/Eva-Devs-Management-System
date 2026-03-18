@@ -15,9 +15,7 @@
         <activity
             android:name=".Activities.ActivityLogin"
             android:exported="false" />
-        <activity
-            android:name=".TemporaryActivity"
-            android:exported="false" /> <!-- <activity -->
+        <!-- <activity -->
         <!-- android:name=".Activities.MainActivity" -->
         <!-- android:exported="false" /> -->
         <activity
