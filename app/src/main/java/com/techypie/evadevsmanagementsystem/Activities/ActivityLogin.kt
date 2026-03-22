@@ -2,11 +2,14 @@ package com.techypie.evadevsmanagementsystem.Activities
 
 import android.content.Intent
 import android.content.SharedPreferences
+import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import com.mycompanny.stories.MyNotification
 import com.techypie.evadevsmanagementsystem.databinding.ActivityLoginBinding
 
 class ActivityLogin : AppCompatActivity() {
@@ -23,6 +26,8 @@ class ActivityLogin : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+
+        setupNotification()
 
         sharedPref = getSharedPreferences("Login", MODE_PRIVATE)
 
@@ -83,6 +88,29 @@ class ActivityLogin : AppCompatActivity() {
             startActivity(Intent(this@ActivityLogin, MainActivity::class.java))
             finish()
             return
+        }
+    }
+
+    fun setupNotification(){
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            if (checkSelfPermission(android.Manifest.permission.POST_NOTIFICATIONS)
+                != PackageManager.PERMISSION_GRANTED) {
+
+                Toast.makeText(this, "Please Grant Permsiion", Toast.LENGTH_SHORT).show()
+                requestPermissions(
+                    arrayOf(android.Manifest.permission.POST_NOTIFICATIONS),
+                    1001
+                )
+            }else{
+                var myNotification = MyNotification(this@ActivityLogin)
+                myNotification.createNotificationChannel(this@ActivityLogin)
+                myNotification.scheduleAt(9,0,0)
+            }
+        }
+        else{
+            var myNotification = MyNotification(this@ActivityLogin)
+            myNotification.createNotificationChannel(this@ActivityLogin)
+            myNotification.scheduleAt(9,0,0)
         }
     }
 }
