@@ -11,8 +11,6 @@ import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import androidx.work.Worker
 import androidx.work.WorkerParameters
-import com.mycompanny.stories.MainActivity
-import com.mycompanny.stories.R
 import com.techypie.evadevsmanagementsystem.Activities.ActivityAttendance
 
 class NotificationWorker(
